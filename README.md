@@ -64,9 +64,11 @@ The dashboard describes recorded displacement patterns and does not infer causal
 
 ## Open the project
 
-1. Download and extract `Displacement_Pulse_PBIP_final.zip`.
+1. [Download the Power BI project archive](Displacement_Pulse_Power_BI_Project.rar) and extract it.
 2. Open `DisplacementPulse.pbip` using a recent version of Power BI Desktop.
 3. If Power Query requests the source location, select `data/displacement_by_origin.csv` from the extracted project folder.
+
+Preview the completed dashboard: [open the PDF](Displacement_Pulse_Dashboard.pdf).
 
 ## Author
 
