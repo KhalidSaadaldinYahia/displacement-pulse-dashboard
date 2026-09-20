@@ -4,6 +4,8 @@ An interactive Power BI analysis of forced displacement by country of origin, bu
 
 The dashboard follows 20 major displacement situations from 2015 to 2025 and separates the scale and composition of refugees, asylum-seekers, and internally displaced people. Its purpose is to help humanitarian analysts move quickly from a global overview to an origin-specific briefing.
 
+> **Default-view note:** headline cards aggregate the selected origin-year rows across 2015–2025. Select one year to read an annual stock. Coverage is limited to the 20 largest origins by the 2025 dashboard total and is not a whole-world estimate.
+
 ## Analytical questions
 
 - Which origin countries account for the largest recorded displaced populations?
