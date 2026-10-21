@@ -64,15 +64,19 @@ UNHCR notes that figures may be provisional and subject to revision. Availabilit
 
 The dashboard describes recorded displacement patterns and does not infer causality.
 
-## Open the project
-
-1. [Download the Power BI project archive](Displacement_Pulse_Power_BI_Project.rar) and extract it.
-2. Open `DisplacementPulse.pbip` using a recent version of Power BI Desktop.
-3. If Power Query requests the source location, select `data/displacement_by_origin.csv` from the extracted project folder.
-
-Preview the completed dashboard: [open the PDF](Displacement_Pulse_Dashboard.pdf).
 
 ## Author
 
 Khalid SaadAldin Yahia  
 Data Analyst | Power BI | SQL | Python | Excel
+
+## Open and inspect the report
+
+- [Preview the dashboard PDF](Displacement_Pulse_Dashboard.pdf). A PDF is a static export; the `.pbip` project contains the interactive report.
+- [Browse the Power BI project](project/) or [download this repository as a ZIP](https://github.com/KhalidSaadaldinYahia/displacement-pulse-dashboard/archive/refs/heads/main.zip). Keep the `project` folder intact after extracting.
+- Open [`DisplacementPulse.pbip`](project/DisplacementPulse.pbip) from the extracted `project` folder in a recent Power BI Desktop. The `.pbip` file references its sibling `.Report` and `.SemanticModel` folders; it cannot open by itself after downloading only that file.
+- On refresh, choose **Anonymous** access if Power BI requests credentials for `raw.githubusercontent.com`. The project reads the included CSV snapshot from this repository's public `main` branch. For offline refresh, replace each table query's `Web.Contents(...)` CSV source with `File.Contents(...)` pointing to its included local `project/data` CSV.
+
+The CSV data snapshots are included under [`project/data`](project/data/). A `.pbix` was not generated because the PBIP source cannot be converted faithfully without opening and saving it in Power BI Desktop.
+
+**Category correction:** The model total now sums refugees, asylum-seekers, and IDPs only. The CSV source also has an `Other People in Need` column (27.662 million across all origin-years), which the old total included. The prior PDF export shows the old 795.2 million aggregate; the corrected three-category sum is 767.508 million origin-year observations. These multi-year sums are counts across annual records, not an annual population stock. Select one year for an annual comparison and re-export the PDF from Power BI Desktop.
