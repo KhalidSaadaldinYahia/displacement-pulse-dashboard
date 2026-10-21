@@ -75,8 +75,12 @@ Data Analyst | Power BI | SQL | Python | Excel
 - [Preview the dashboard PDF](Displacement_Pulse_Dashboard.pdf). A PDF is a static export; the `.pbip` project contains the interactive report.
 - [Browse the Power BI project](project/) or [download this repository as a ZIP](https://github.com/KhalidSaadaldinYahia/displacement-pulse-dashboard/archive/refs/heads/main.zip). Keep the `project` folder intact after extracting.
 - Open [`DisplacementPulse.pbip`](project/DisplacementPulse.pbip) from the extracted `project` folder in a recent Power BI Desktop. The `.pbip` file references its sibling `.Report` and `.SemanticModel` folders; it cannot open by itself after downloading only that file.
-- On refresh, choose **Anonymous** access if Power BI requests credentials for `raw.githubusercontent.com`. The project reads the included CSV snapshot from this repository's public `main` branch. For offline refresh, replace each table query's `Web.Contents(...)` CSV source with `File.Contents(...)` pointing to its included local `project/data` CSV.
+- On refresh, choose **Anonymous** access if Power BI requests credentials for `raw.githubusercontent.com`. The project reads the included CSV snapshot from this repository at fixed commit `61d2355e4e74`. For offline refresh, replace each table query's `Web.Contents(...)` CSV source with `File.Contents(...)` pointing to its included local `project/data` CSV.
 
 The CSV data snapshots are included under [`project/data`](project/data/). A `.pbix` was not generated because the PBIP source cannot be converted faithfully without opening and saving it in Power BI Desktop.
 
 **Category correction:** The model total now sums refugees, asylum-seekers, and IDPs only. The CSV source also has an `Other People in Need` column (27.662 million across all origin-years), which the old total included. The earlier PDF export shows an old 795.2 million multi-year aggregate. The corrected 2025 three-category stock for this extract is 90,573,559 people. The model now uses the latest year in the Year filter for headline cards and ranking visuals, while time-series charts retain annual context. Re-export the PDF from Power BI Desktop.
+
+### Reproducible data snapshot
+
+The semantic model reads CSV files from immutable commit `61d2355e4e74fb8cfb679ed028624bf8ba159a76`. The same files are included in `project/data/` for inspection. Refreshing this project will not silently switch to a later `main` branch snapshot. To analyze newer data, update the CSV and source URL together and revalidate the measures and preview.
