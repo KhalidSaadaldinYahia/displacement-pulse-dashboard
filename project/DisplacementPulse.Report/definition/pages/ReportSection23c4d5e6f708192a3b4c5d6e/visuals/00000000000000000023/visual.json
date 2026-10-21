@@ -180,7 +180,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'TOTAL DISPLACED'"
+                  "Value": "'DISPLACED · LATEST SELECTED YEAR'"
                 }
               }
             },

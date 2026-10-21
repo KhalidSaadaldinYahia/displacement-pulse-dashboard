@@ -31,7 +31,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "The dashboard covers the 20 largest origins in 2025, not the full global population.",
+                    "value": "The extract covers 19 named origins plus one Unknown bucket; it is not a global total.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",

@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Aggregated 2015–2025 origin-year observations. Use the Year filter for an annual stock.",
+                    "value": "Headline cards show the latest selected year (2025 by default). Trends retain each annual stock.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",

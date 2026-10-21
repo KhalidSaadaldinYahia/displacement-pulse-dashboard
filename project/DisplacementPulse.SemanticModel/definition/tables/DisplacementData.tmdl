@@ -1,18 +1,18 @@
 table DisplacementData
 	lineageTag: d9c1f7d5-ce73-4107-8898-b6ba5fadfeef
 
-	/// Refugees under UNHCR's mandate in the current filter context
-	measure 'Total Refugees' = SUM(DisplacementData[Refugees])
+	/// Refugees in the latest year of the current filter context; year-axis visuals retain each year
+	measure 'Total Refugees' = CALCULATE(SUM(DisplacementData[Refugees]), DisplacementData[Year] = MAX(DisplacementData[Year]))
 		formatString: #,0
 		lineageTag: a42c105f-8aa0-437d-aaee-00ddf02ffe75
 
-	/// People with pending asylum claims in the current filter context
-	measure 'Total Asylum Seekers' = SUM(DisplacementData[Asylum Seekers])
+	/// People with pending asylum claims in the latest selected year
+	measure 'Total Asylum Seekers' = CALCULATE(SUM(DisplacementData[Asylum Seekers]), DisplacementData[Year] = MAX(DisplacementData[Year]))
 		formatString: #,0
 		lineageTag: bc3df59f-598c-4bea-90cb-f434b4d9dbc5
 
-	/// Internally displaced people reported in the dataset
-	measure 'Total Internally Displaced' = SUM(DisplacementData[Internally Displaced])
+	/// Internally displaced people in the latest selected year
+	measure 'Total Internally Displaced' = CALCULATE(SUM(DisplacementData[Internally Displaced]), DisplacementData[Year] = MAX(DisplacementData[Year]))
 		formatString: #,0
 		lineageTag: 1602651b-d870-44e8-842f-e6940bb981b5
 

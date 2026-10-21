@@ -2,9 +2,9 @@
 
 An interactive Power BI analysis of forced displacement by country of origin, built with official UNHCR Refugee Population Statistics data.
 
-The dashboard follows 20 major displacement situations from 2015 to 2025 and separates the scale and composition of refugees, asylum-seekers, and internally displaced people. Its purpose is to help humanitarian analysts move quickly from a global overview to an origin-specific briefing.
+The dashboard follows 19 named origins plus one `Unknown` origin bucket from 2015 to 2025 and separates the scale and composition of refugees, asylum-seekers, and internally displaced people. Its purpose is to help humanitarian analysts move quickly from a global overview to an origin-specific briefing.
 
-> **Default-view note:** headline cards aggregate the selected origin-year rows across 2015–2025. Select one year to read an annual stock. Coverage is limited to the 20 largest origins by the 2025 dashboard total and is not a whole-world estimate.
+> **Default-view note:** headline cards show the latest year in the current Year selection (2025 when all years are selected). Line charts still show each annual stock. The data covers 19 named origins and an `Unknown` bucket; it is not a whole-world estimate.
 
 ## Analytical questions
 
@@ -55,14 +55,14 @@ Definitions, calculation logic, source coverage, refresh date, analytical assump
 - UNHCR Refugee Population Statistics API documentation: https://api.unhcr.org/docs/refugee-statistics.html
 - Population endpoint: https://api.unhcr.org/population/v1/population/
 - Dashboard coverage: 2015–2025
-- Selection: 20 largest origins by the latest-year dashboard total
+- Selection: 19 named origins plus an `Unknown` bucket in the supplied extract. The underlying full-source ranking and selection query were not preserved, so a strict “top 20 countries” claim cannot be verified. The `Unknown` bucket must not be presented as a country.
 - Data retrieved: 10 August 2026
 
 ## Limitations
 
 UNHCR notes that figures may be provisional and subject to revision. Availability varies by population type, country, and year. The dashboard total is an analytical sum of the categories presented in this model; it should not be substituted for UNHCR’s separately published global forced-displacement headline, which may reconcile additional mandates and data sources.
 
-The dashboard describes recorded displacement patterns and does not infer causality.
+The dashboard describes recorded displacement patterns and does not infer causality. Its CSV is an extract rather than a fully reproducible API result: the exact request parameters, extraction script and response identifiers are absent. The stated retrieval date is from the supplied project documentation and cannot be verified from the CSV alone.
 
 
 ## Author
@@ -79,4 +79,4 @@ Data Analyst | Power BI | SQL | Python | Excel
 
 The CSV data snapshots are included under [`project/data`](project/data/). A `.pbix` was not generated because the PBIP source cannot be converted faithfully without opening and saving it in Power BI Desktop.
 
-**Category correction:** The model total now sums refugees, asylum-seekers, and IDPs only. The CSV source also has an `Other People in Need` column (27.662 million across all origin-years), which the old total included. The prior PDF export shows the old 795.2 million aggregate; the corrected three-category sum is 767.508 million origin-year observations. These multi-year sums are counts across annual records, not an annual population stock. Select one year for an annual comparison and re-export the PDF from Power BI Desktop.
+**Category correction:** The model total now sums refugees, asylum-seekers, and IDPs only. The CSV source also has an `Other People in Need` column (27.662 million across all origin-years), which the old total included. The earlier PDF export shows an old 795.2 million multi-year aggregate. The corrected 2025 three-category stock for this extract is 90,573,559 people. The model now uses the latest year in the Year filter for headline cards and ranking visuals, while time-series charts retain annual context. Re-export the PDF from Power BI Desktop.
