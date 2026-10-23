@@ -1,14 +1,8 @@
 # Displacement Pulse
 
-## Download the complete project
+## Open the interactive dashboard
 
-**To open this project:** [download the complete repository ZIP](https://github.com/KhalidSaadaldinYahia/displacement-pulse-dashboard/archive/refs/heads/main.zip), extract it, and open `project/DisplacementPulse.pbip` in Power BI Desktop. Keep the `.Report`, `.SemanticModel`, and `data` folders beside the `.pbip` file. **Downloading the `.pbip` file alone will not produce a working report.** The included CSVs are the inspectable data snapshot; the model refreshes from a fixed online copy of those CSVs by default. The PDF is a static preview.
-
-An interactive Power BI analysis of forced displacement by country of origin, built with official UNHCR Refugee Population Statistics data.
-
-The dashboard follows 19 named origins plus one `Unknown` origin bucket from 2015 to 2025 and separates the scale and composition of refugees, asylum-seekers, and internally displaced people. Its purpose is to help humanitarian analysts move quickly from a global overview to an origin-specific briefing.
-
-> **Default-view note:** headline cards show the latest year in the current Year selection (2025 when all years are selected). Line charts still show each annual stock. The data covers 19 named origins and an `Unknown` bucket; it is not a whole-world estimate.
+**Recommended:** [download DisplacementPulse.pbix](DisplacementPulse.pbix) and open it in a recent Power BI Desktop. The PBIX contains the report and its embedded data model, so you only need this one file to explore the saved dashboard. For reproducible source files and the included CSV snapshot, [download the complete repository ZIP](https://github.com/KhalidSaadaldinYahia/displacement-pulse-dashboard/archive/refs/heads/main.zip), extract it, and open `project/DisplacementPulse.pbip` with its sibling `.Report`, `.SemanticModel`, and `data` folders intact. The PDF below is a static preview. A data refresh may require network access to the documented source snapshot.
 
 ## Analytical questions
 
