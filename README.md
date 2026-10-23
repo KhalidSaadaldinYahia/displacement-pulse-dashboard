@@ -1,5 +1,9 @@
 # Displacement Pulse
 
+## Download the complete project
+
+**To open this project:** [download the complete repository ZIP](https://github.com/KhalidSaadaldinYahia/displacement-pulse-dashboard/archive/refs/heads/main.zip), extract it, and open `project/DisplacementPulse.pbip` in Power BI Desktop. Keep the `.Report`, `.SemanticModel`, and `data` folders beside the `.pbip` file. **Downloading the `.pbip` file alone will not produce a working report.** The included CSVs are the inspectable data snapshot; the model refreshes from a fixed online copy of those CSVs by default. The PDF is a static preview.
+
 An interactive Power BI analysis of forced displacement by country of origin, built with official UNHCR Refugee Population Statistics data.
 
 The dashboard follows 19 named origins plus one `Unknown` origin bucket from 2015 to 2025 and separates the scale and composition of refugees, asylum-seekers, and internally displaced people. Its purpose is to help humanitarian analysts move quickly from a global overview to an origin-specific briefing.
